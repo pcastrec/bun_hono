@@ -1,0 +1,16 @@
+<h1>{{ action }}</h1>
+<form method="POST" action="/{{action.toLocaleLowerCase()}}">
+    <div>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" required>
+    </div>
+
+    <button type="submit">{{action}}</button>
+</form>
+@if(errors)
+<p>Erreur: Wrong crendentials</p>
+@end

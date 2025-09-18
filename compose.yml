@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: treasure
+    ports:
+      - "5432:5432"
+
+  app:
+    image: oven/bun
+    working_dir: /usr/app
+    user: "1000:1000"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/usr/app
+    command: ["bun", "install", "&&", "bun", "run", "dev", "--host 0.0.0.0"]
+    depends_on:
+      - postgres

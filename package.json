@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "edge.js": "^6.2.1",
+    "hono": "^4.8.4",
+    "hono-sessions": "^0.7.3",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.26"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/bun": "latest",
+    "@types/pg": "^8.15.5"
+  }
+}

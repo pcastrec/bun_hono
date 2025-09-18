@@ -1,0 +1,48 @@
+<h1 style="text-align:center;">Énigmes</h1>
+
+<div class="card">
+    <h2>{{ enigme.label }}</h2>
+    <button id="btn">Ping</button>
+    <code id="res"></code>
+</div>
+
+<script>
+
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', getLocation)
+
+    function success(pos) {
+        console.log(pos)
+        const result = document.getElementById('res')
+        const { latitude, longitude, accuracy } = pos.coords;
+        res.textContent = JSON.stringify({ latitude, longitude })
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}, Précision: ±${accuracy} m`);
+        console.log(window.location.href)
+        fetch(window.location.href, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(pos.coords)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(console.error)
+    }
+
+    function error(err) {
+        console.log(`Erreur: ${err.message}`);
+    }
+
+    function getLocation() {
+        if (!navigator.geolocation) {
+            console.log("La géolocalisation n'est pas supportée par ce navigateur.");
+        } else {
+            console.log("Recherche de la position...");
+            navigator.geolocation.getCurrentPosition(success, error, {
+                enableHighAccuracy: true, // GPS haute précision si dispo
+                timeout: 10000,           // délai max avant erreur (10s)
+                maximumAge: 0             // pas de cache
+            });
+        }
+    }
+
+</script>

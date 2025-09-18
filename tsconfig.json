@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "esnext", // <== nécessaire pour `import.meta`
+    "moduleResolution": "node", // résolution des imports
+    "target": "es2020", // recommandé pour compatibilité moderne
+    "esModuleInterop": true, // utile pour import de modules CommonJS
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
