@@ -6,6 +6,9 @@ export const About: FC = ({ session, year }) => {
         <Layout session={session}>
             <h1>À propos</h1>
             <p>Nous sommes en {year}</p>
+             <h1>À propos</h1>
+            <p>Nous sommes en {year}</p>
+
         </Layout>
     )
 }
