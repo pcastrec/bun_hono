@@ -6,9 +6,13 @@ export const About: FC = ({ session, year }) => {
         <Layout session={session}>
             <h1>À propos</h1>
             <p>Nous sommes en {year}</p>
-             <h1>À propos</h1>
-            <p>Nous sommes en {year}</p>
 
-        </Layout>
+            <div style={{
+                "height": "100px",
+                "width": "100px",
+                "background": "aqua",
+                "borderRadius": "3em"
+            }}></div>
+        </Layout >
     )
 }
