@@ -9,6 +9,10 @@ export const Home: FC = ({ session }) => {
         <Layout session={session}>
             <h1>{`Welcome ${user?.pseudo || 'Stranger'} 🚀`}</h1>
             <p>Ceci est la page d'accueil.</p>
+            <fieldset>
+                <legend>Wohhh</legend>
+                Incoryable
+            </fieldset>
         </Layout>
     )
 }
