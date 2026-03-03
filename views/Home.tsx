@@ -8,7 +8,7 @@ export const Home: FC = ({ session }) => {
     return (
         <Layout session={session}>
             <h1>{`Welcome ${user?.pseudo || 'Stranger'} 🚀`}</h1>
-            <p>Ceci est la page d'accueil.</p>
+            <p>Ceci est la page d'accueil de Pierre.</p>
         </Layout>
     )
 }
