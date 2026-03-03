@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist",
     "module": "esnext", // <== nécessaire pour `import.meta`
     "moduleResolution": "node", // résolution des imports
     "target": "es2020", // recommandé pour compatibilité moderne

@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "edge.js": "^6.2.1",
     "hono": "^4.8.4",
     "hono-sessions": "^0.7.3",
     "pg": "^8.16.3",

@@ -1,9 +1,8 @@
 import { Session } from "hono-sessions"
 
-export interface SessionDataTypes {
+export type SessionDataTypes = {
   // Définir ici vos types de données de session
-  userId?: number
-  pseudo?: string
+  user?: {}
   role?: string
   // ... autres propriétés
 }

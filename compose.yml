@@ -17,6 +17,6 @@ services:
       - "8080:8080"
     volumes:
       - ./:/usr/app
-    command: ["bun", "install", "&&", "bun", "run", "dev", "--host 0.0.0.0"]
+    command: sh -c "bun install && bun run dev --host 0.0.0.0"
     depends_on:
       - postgres
